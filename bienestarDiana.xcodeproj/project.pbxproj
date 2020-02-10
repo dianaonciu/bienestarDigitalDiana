@@ -21,6 +21,7 @@
 		7FC2445C23E8A9DD00AEEEC4 /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2445B23E8A9DD00AEEEC4 /* AppList.swift */; };
 		7FC2445E23E8AA0F00AEEEC4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2445D23E8AA0F00AEEEC4 /* DetailViewController.swift */; };
 		7FC2446023E8AA3F00AEEEC4 /* AppsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2445F23E8AA3F00AEEEC4 /* AppsCollectionViewCell.swift */; };
+		7FEA9F1C23F1D66200A44702 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA9F1B23F1D66200A44702 /* UserProfileViewController.swift */; };
 		973D1655F481A2F4D44CFA63 /* Pods_bienestarDiana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F91D028AFDADEFEB57EC4D0 /* Pods_bienestarDiana.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		7FC2445B23E8A9DD00AEEEC4 /* AppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList.swift; sourceTree = "<group>"; };
 		7FC2445D23E8AA0F00AEEEC4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7FC2445F23E8AA3F00AEEEC4 /* AppsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7FEA9F1B23F1D66200A44702 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				7FC2445B23E8A9DD00AEEEC4 /* AppList.swift */,
 				7FC2445D23E8AA0F00AEEEC4 /* DetailViewController.swift */,
 				7FC2445F23E8AA3F00AEEEC4 /* AppsCollectionViewCell.swift */,
+				7FEA9F1B23F1D66200A44702 /* UserProfileViewController.swift */,
 			);
 			path = bienestarDiana;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC2445023E88CDE00AEEEC4 /* LoginPageViewController.swift in Sources */,
+				7FEA9F1C23F1D66200A44702 /* UserProfileViewController.swift in Sources */,
 				7FC2446023E8AA3F00AEEEC4 /* AppsCollectionViewCell.swift in Sources */,
 				7FC2445223E8900300AEEEC4 /* DataHelpers.swift in Sources */,
 				7F2B25D123DF628400CE04C9 /* ViewController.swift in Sources */,

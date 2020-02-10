@@ -1,6 +1,6 @@
 //
-//  RegisterPageViewController.swift
-//  petitui
+//  UserProfileViewController.swift
+//  bienestarDiana
 //
 //
 
@@ -19,8 +19,6 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userPasswordTF: SkyFloatingLabelTextField!
     
     @IBOutlet weak var userConfirmPassword: SkyFloatingLabelTextField!
-    
-    @IBOutlet weak var userAgeTF: UISwitch!
     
     
     override func viewDidLoad() {
