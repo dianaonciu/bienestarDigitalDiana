@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - SkyFloatingLabelTextField (3.8.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
+  - SkyFloatingLabelTextField
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SkyFloatingLabelTextField
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+
+PODFILE CHECKSUM: 9a4055f4e2685296af78c454608e542c37951511
+
+COCOAPODS: 1.8.4
