@@ -10,7 +10,7 @@ import UIKit
 
 class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var datos = ["whatsapp", "facebook"]
+    var datos = ["chrome", "clock", "facebook", "gmail", "instagram", "whatsapp"]
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     

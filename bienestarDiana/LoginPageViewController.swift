@@ -23,7 +23,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButton(_ sender: Any) {
         let userEmail = userEmailTF.text;
         let userPassword = userPasswordTF.text;
-        self.segueLogin()
+        
         if(userEmail!.isEmpty || userPassword!.isEmpty)
         {
             // Alert message
@@ -31,9 +31,12 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
             return;
             
         } else {
-            
+           
             if(DataHelpers.isValidEmail(userEmail!) && DataHelpers.isValidPassword(userPassword!)){
-                loginUser(email: userEmail!, password: userPassword!)
+              self.segueLogin()
+            }
+                /*loginUser(email: userEmail!, password: userPassword!)
+                
                 {
                     (isWorking) in
                     
@@ -44,7 +47,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-            }
+            }*/
             
             
         }

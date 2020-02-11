@@ -615,14 +615,14 @@
                                         <rect key="frame" x="16" y="8" width="382" height="398"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="5ee-7z-A0z">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="319"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="287.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="abb-Ba-ehe">
-                                                <rect key="frame" x="0.0" y="334" width="382" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="302.5" width="382" height="31.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5r-in-c8y">
-                                                        <rect key="frame" x="91.5" y="0.0" width="199.5" height="0.0"/>
+                                                        <rect key="frame" x="91.5" y="0.0" width="199.5" height="31.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <color key="textColor" red="0.2439045608" green="0.80843698980000001" blue="0.75686353449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1016,7 +1016,7 @@
     <resources>
         <image name="backgroundimage" width="16" height="16"/>
         <image name="logovblanco" width="16" height="16"/>
-        <image name="whatsapp" width="512" height="512"/>
+        <image name="whatsapp" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kgs-tf-chJ"/>
