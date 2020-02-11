@@ -12,10 +12,19 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var datos = ["chrome", "clock", "facebook", "gmail", "chrome", "instagram", "whatsapp"]
     
-    var path: URL?
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.myCollectionView.dataSource = self
+        self.myCollectionView.delegate = self
+        
+        DataHelpers.loadFile()
+    }
+    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datos.count
     }
@@ -24,6 +33,7 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         let identifier = "AppsCellID"
         let cell = self.myCollectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! AppsCollectionViewCell
         let title = datos[indexPath.row]
+        
         cell.itemImage.image =  UIImage.init(imageLiteralResourceName: title)
         cell.itemLabel.text = title
         
@@ -39,14 +49,6 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         detailVC.detailName = title
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.myCollectionView.dataSource = self
-        self.myCollectionView.delegate = self
-       
-        path = URL(fileURLWithPath: "/Users/alumnos/Desktop/usage.csv")
-    }
-    
+   
     
 }
