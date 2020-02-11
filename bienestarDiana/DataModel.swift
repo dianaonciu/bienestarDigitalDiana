@@ -8,19 +8,19 @@
 
 import Foundation
 
-public struct DataModel: Codable{
+ struct DataModel: Codable{
     
-     var Date: String
+     var Date: String?
     
-     var App: String
+     var App: String?
     
-     var Event: String
+     var Event: String?
     
-     var Latitude: String
+     var Latitude: Double?
     
-     var Longitude: String
+     var Longitude: Double?
     
-     init(Date: String, App: String, Event: String, Latitude: String, Longitude: String){
+     init(Date: String, App: String, Event: String, Latitude: Double, Longitude: Double){
         
          self.Date = Date
         
@@ -32,6 +32,19 @@ public struct DataModel: Codable{
         
          self.Longitude = Longitude
      
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case Date
+        
+        case App
+        
+        case Event
+        
+        case Latitude
+        
+        case  Longitude
+        
     }
     
  }

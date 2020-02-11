@@ -10,6 +10,8 @@ import UIKit
 //Displays an alert with a message depending on the string passed through parameters
 class DataHelpers{
     
+    
+    
     static var path = URL(fileURLWithPath: "/Users/alumnos/Desktop/usage.csv")
    
     static func loadFile() {
@@ -29,6 +31,32 @@ class DataHelpers{
         
         
         
+    }
+    
+    static func parseCsvData ()-> [DataModel] {
+        var texto:String = " "
+        do {
+            
+             texto = try String(contentsOf: path, encoding: .utf8)
+            
+            print(JSONObjectFromTSV(tsvInputString: texto, columnNames: ["Date","App","Event","Latitude","Longitude"]))
+            
+            
+        } catch {
+            
+            print("Error al leer desde fichero")
+            
+        }
+        var result: [DataModel] = []
+        var rows = texto.components(separatedBy: "\n")
+        rows.remove(at:0)
+        for row in rows{
+            let column = row.components(separatedBy: ",")
+            let usage=DataModel(Date: column[0], App: column[1], Event: column[2], Latitude: Double(column[3])!, Longitude: Double(column[4])!)
+            result.append(usage)
+        }
+        
+        return result
     }
     
     static func JSONObjectFromTSV(tsvInputString:String, columnNames optionalColumnNames:[String]? = nil) -> Array<NSDictionary>

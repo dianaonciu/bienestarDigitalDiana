@@ -12,6 +12,7 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var datos = ["chrome", "clock", "facebook", "gmail", "chrome", "instagram", "whatsapp"]
     
+    var data: [DataModel] = []
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
@@ -22,6 +23,7 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         self.myCollectionView.delegate = self
         
         DataHelpers.loadFile()
+        print(DataHelpers.parseCsvData())
     }
     
 
