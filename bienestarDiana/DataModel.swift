@@ -8,64 +8,33 @@
 
 import Foundation
 
-
-
 public struct DataModel: Codable{
     
+     var Date: String
     
+     var App: String
     
-    var Date: String
+     var Event: String
     
+     var Latitude: String
     
+     var Longitude: String
     
-    var App: String
-    
-    
-    
-    var Event: String
-    
-    
-    
-    var Latitude: String
-    
-    
-    
-    var Longitude: String
-    
-    
-    
-    
-    
-    
-    
-    init(Date: String, App: String, Event: String, Latitude: String, Longitude: String){
+     init(Date: String, App: String, Event: String, Latitude: String, Longitude: String){
         
+         self.Date = Date
         
+         self.App = App
         
-        self.Date = Date
+         self.Event = Event
         
+         self.Latitude = Latitude
         
-        
-        self.App = App
-        
-        
-        
-        self.Event = Event
-        
-        
-        
-        self.Latitude = Latitude
-        
-        
-        
-        self.Longitude = Longitude
-        
-        
-        
+         self.Longitude = Longitude
+     
     }
     
-    
-}
+ }
     
     
     

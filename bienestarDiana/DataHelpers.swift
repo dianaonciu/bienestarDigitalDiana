@@ -1,11 +1,10 @@
 //
 //  DataHelpers.swift
-//  petitui
+//  bienestarDiana
 //
-//  Created by Jose D. on 22/01/2020.
-//  Copyright © 2020 Sergio. All rights reserved.
+//  Created by alumnos on 10/02/2020.
+//  Copyright © 2020 alumnos. All rights reserved.
 //
-
 import Foundation
 import UIKit
 //Displays an alert with a message depending on the string passed through parameters

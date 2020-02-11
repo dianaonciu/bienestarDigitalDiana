@@ -1,9 +1,9 @@
 //
 //  LoginPageViewController.swift
-//  petitui
+//  bienestarDiana
 //
-//  Created by alumnos on 13/01/2020.
-//  Copyright © 2020 Sergio. All rights reserved.
+//  Created by alumnos on 10/02/2020.
+//  Copyright © 2020 alumnos. All rights reserved.
 //
 
 import UIKit

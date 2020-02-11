@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  AppList.swift
 //  Collection
 //
-//  Created by alumnos on 21/10/2019.
+//  Created by alumnos on 10/02/2020.
 //  Copyright © 2019 alumnos. All rights reserved.
 //
 
@@ -10,7 +10,9 @@ import UIKit
 
 class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var datos = ["chrome", "clock", "facebook", "gmail", "instagram", "whatsapp"]
+    var datos = ["chrome", "clock", "facebook", "gmail", "chrome", "instagram", "whatsapp"]
+    
+    var path: URL?
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
@@ -42,6 +44,8 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         // Do any additional setup after loading the view.
         self.myCollectionView.dataSource = self
         self.myCollectionView.delegate = self
+       
+        path = URL(fileURLWithPath: "/Users/alumnos/Desktop/usage.csv")
     }
     
     

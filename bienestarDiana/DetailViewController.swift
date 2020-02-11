@@ -1,9 +1,9 @@
 //
 //  DetailViewController.swift
-//  Collection
+//  bienestarDiana
 //
-//  Created by alumnos on 22/10/2019.
-//  Copyright © 2019 alumnos. All rights reserved.
+//  Created by alumnos on 10/02/2020.
+//  Copyright © 2020 alumnos. All rights reserved.
 //
 
 import UIKit
