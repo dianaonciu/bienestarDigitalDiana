@@ -10,15 +10,15 @@ import Foundation
 
  struct DataModel: Codable{
     
-     var Date: String?
+     var Date: String
     
-     var App: String?
+     var App: String
     
-     var Event: String?
+     var Event: String
     
-     var Latitude: Double?
+     var Latitude: Double
     
-     var Longitude: Double?
+     var Longitude: Double
     
      init(Date: String, App: String, Event: String, Latitude: Double, Longitude: Double){
         

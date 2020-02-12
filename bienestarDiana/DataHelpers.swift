@@ -102,6 +102,97 @@ class DataHelpers{
         
     }
     
+    static func getAppDates(dataModel:[DataModel] , app: String)-> Array<String>  {
+        
+        var appDates = [String]()
+        
+        for i in dataModel{
+            
+            if(i.App == app){
+                
+                appDates.append(i.Date)
+     
+            }
+            
+        }
+        
+         return appDates
+        
+    }
+    
+    static func totalMinutesByApp(appDates:[String]) -> Double {
+        
+       var arraySeconds = [Double]()
+        
+       let dateFormatter = DateFormatter()
+        
+        dateFormatter.locale = Locale(identifier: " en_US_POSIX")
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        for j in appDates{
+            
+           let date = dateFormatter.date(from: j)
+            
+           let epoch = date?.timeIntervalSince1970
+        
+            arraySeconds.append(epoch!)
+            
+         }
+        
+        var arrayOpen = [Double]()
+        
+        var arrayClose = [Double]()
+      
+        for i in 0..<arraySeconds.count{
+            
+            if i % 2 == 0 {
+                
+                arrayOpen.append(arraySeconds[i])
+                
+            }else{
+                
+                arrayClose.append(arraySeconds[i])
+                
+            }
+            
+        }
+    
+        var arrayResta = [Double]()
+        
+        var resta1 : Double
+        
+        for j in 0..<arrayClose.count{
+            
+            resta1 = arrayClose[j] - arrayOpen[j]
+            
+            arrayResta.append(resta1)
+            
+        }
+        
+        
+        var totalSeconds : Double = arrayResta.reduce(0, +)
+        
+        var totalMinutes = (totalSeconds.truncatingRemainder(dividingBy: 3600) / 60)
+        
+        let totalMinutesRounded = Double(round(100*totalMinutes)/100)
+        
+   
+        print("Total de minutos  \(totalMinutesRounded)")
+        
+        return totalMinutesRounded
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
