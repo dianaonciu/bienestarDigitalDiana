@@ -416,7 +416,7 @@
             </objects>
             <point key="canvasLocation" x="544.92753623188412" y="138.61607142857142"/>
         </scene>
-        <!--Item-->
+        <!--Apps List-->
         <scene sceneID="yPB-Gc-ch4">
             <objects>
                 <viewController id="dx4-35-npC" customClass="AppList" customModule="bienestarDiana" customModuleProvider="target" sceneMemberID="viewController">
@@ -482,7 +482,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f91-o5-ti2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9MW-sr-zEy"/>
+                    <tabBarItem key="tabBarItem" title="Apps List" id="9MW-sr-zEy"/>
                     <connections>
                         <outlet property="myCollectionView" destination="zkW-rU-qBT" id="mM3-7K-P60"/>
                     </connections>
@@ -570,7 +570,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dx4-35-npC" kind="relationship" relationship="viewControllers" id="JZu-Rp-qcz"/>
-                        <segue destination="9bw-HE-hJs" kind="relationship" relationship="viewControllers" id="SBh-eQ-oWG"/>
+                        <segue destination="7yw-SM-oqh" kind="relationship" relationship="viewControllers" id="TMI-3v-f0R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7J-Ub-K9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,93 +720,208 @@
             </objects>
             <point key="canvasLocation" x="545" y="830"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="pp1-2r-nYk">
+        <!--Time Controller-->
+        <scene sceneID="g39-oe-pd1">
             <objects>
-                <viewController id="kLm-I7-KGs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2nI-VI-TFt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="7yw-SM-oqh" customClass="TimeControllViewController" customModule="bienestarDiana" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mjw-0K-32b"/>
+                        <viewControllerLayoutGuide type="bottom" id="QCQ-nA-utx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0UP-zx-SOM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIME CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-Xu-Qla">
-                                <rect key="frame" x="83" y="65" width="248" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-yZ-EJR">
-                                <rect key="frame" x="193" y="240" width="201" height="113"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nX-v3-lf9">
-                                <rect key="frame" x="83" y="377" width="268" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="Arz-D3-yAA">
-                                <rect key="frame" x="105" y="479" width="228" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-yy-0Hz">
-                                <rect key="frame" x="83" y="544" width="268" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx0-Z1-Czk">
-                                <rect key="frame" x="63" y="610" width="114" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-dU-Qlb">
-                                <rect key="frame" x="256" y="611" width="114" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-9m-wgo">
-                                <rect key="frame" x="145" y="716" width="132" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="SAVE"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose An App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ic-hc-W0l">
-                                <rect key="frame" x="20" y="267" width="157" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0b-MC-pyr">
-                                <rect key="frame" x="188" y="438" width="59" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0Y-Kw-pk8">
-                                <rect key="frame" x="234" y="643" width="158" height="65"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-29-CSb">
-                                <rect key="frame" x="41" y="643" width="158" height="65"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YpA-v7-TCn">
+                                <rect key="frame" x="147" y="88" width="120" height="273.5"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pgi-bW-n5t">
+                                        <rect key="frame" x="0.0" y="123" width="120" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="fbB-56-lge"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="AM"/>
+                                            <segment title="PM"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="switchBetweenAMAndPM:" destination="7yw-SM-oqh" eventType="valueChanged" id="V8v-YZ-4ct"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time_indicators" translatesAutoresizingMaskIntoConstraints="NO" id="el4-Cx-uI1">
+                                <rect key="frame" x="162" y="361.5" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="el4-Cx-uI1" secondAttribute="height" id="W40-RM-MHy"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-Dn-fIA">
+                                <rect key="frame" x="147" y="327" width="120" height="159"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="53" text="AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGo-nG-uWK">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                        <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZL-3t-51k">
+                                        <rect key="frame" x="0.0" y="53" width="120" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="53" text="06" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHJ-fq-xbH">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
+                                                <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="12" placeholderIntrinsicHeight="53" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-pM-0fS">
+                                                <rect key="frame" x="54" y="0.0" width="12" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
+                                                <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="53" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-Ly-4Do">
+                                                <rect key="frame" x="66" y="0.0" width="54" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="44"/>
+                                                <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="53" text="MONDAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ism-jI-iSv">
+                                        <rect key="frame" x="0.0" y="106" width="120" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                        <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxb-BD-47j" customClass="CircularSlider" customModule="HGCircularSlider">
+                                <rect key="frame" x="182" y="381.5" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskFillColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                        <color key="value" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="0.79496228449999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thumbRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbTintColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbStrokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbStrokeHighlightedColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvt-JL-6bb" customClass="CircularSlider" customModule="HGCircularSlider">
+                                <rect key="frame" x="207" y="406.5" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskFillColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diskColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                        <color key="value" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="0.79496228449999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thumbRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbTintColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbStrokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endThumbStrokeHighlightedColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WjY-ZJ-gv8">
+                                <rect key="frame" x="141" y="451.5" width="132" height="361.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0CE-kH-ydt">
+                                        <rect key="frame" x="0.0" y="161" width="132" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="132" placeholderIntrinsicHeight="20" text="PARIS, FRANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-Ls-gD7">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.035294117649999998" alpha="0.61616379310000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="132" placeholderIntrinsicHeight="20" text="November 9, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYL-x2-yfT">
+                                                <rect key="frame" x="0.0" y="20" width="132" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                                <color key="textColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.035294117649999998" alpha="0.61616379310000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Fho-eH-cvu"/>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.1450980392" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YpA-v7-TCn" firstAttribute="top" secondItem="Mjw-0K-32b" secondAttribute="bottom" id="45I-wd-gih"/>
+                            <constraint firstItem="nc6-Dn-fIA" firstAttribute="centerX" secondItem="0UP-zx-SOM" secondAttribute="centerX" id="GPY-Ti-NgY"/>
+                            <constraint firstItem="bvt-JL-6bb" firstAttribute="leading" secondItem="el4-Cx-uI1" secondAttribute="leading" constant="45" id="Ieu-Dz-Qpd"/>
+                            <constraint firstItem="YpA-v7-TCn" firstAttribute="centerX" secondItem="0UP-zx-SOM" secondAttribute="centerX" id="M8m-yI-Yoi"/>
+                            <constraint firstItem="yxb-BD-47j" firstAttribute="top" secondItem="el4-Cx-uI1" secondAttribute="top" constant="20" id="Nav-AY-ESb"/>
+                            <constraint firstItem="el4-Cx-uI1" firstAttribute="centerX" secondItem="0UP-zx-SOM" secondAttribute="centerX" id="PNj-lV-IQX"/>
+                            <constraint firstItem="WjY-ZJ-gv8" firstAttribute="centerX" secondItem="0UP-zx-SOM" secondAttribute="centerX" id="QWX-0m-E1c"/>
+                            <constraint firstItem="WjY-ZJ-gv8" firstAttribute="top" secondItem="el4-Cx-uI1" secondAttribute="bottom" id="Shc-pC-nOZ"/>
+                            <constraint firstItem="bvt-JL-6bb" firstAttribute="trailing" secondItem="el4-Cx-uI1" secondAttribute="trailing" constant="-45" id="ZiR-eH-cfv"/>
+                            <constraint firstItem="nc6-Dn-fIA" firstAttribute="centerY" secondItem="0UP-zx-SOM" secondAttribute="centerY" id="dz8-Y0-ioL"/>
+                            <constraint firstItem="bvt-JL-6bb" firstAttribute="top" secondItem="el4-Cx-uI1" secondAttribute="top" constant="45" id="e1G-IN-Y9V"/>
+                            <constraint firstItem="yxb-BD-47j" firstAttribute="leading" secondItem="el4-Cx-uI1" secondAttribute="leading" constant="20" id="efN-BI-1KH"/>
+                            <constraint firstItem="QCQ-nA-utx" firstAttribute="top" secondItem="WjY-ZJ-gv8" secondAttribute="bottom" id="gmj-E3-FbW"/>
+                            <constraint firstItem="el4-Cx-uI1" firstAttribute="centerY" secondItem="0UP-zx-SOM" secondAttribute="centerY" id="ncS-SN-bSO"/>
+                            <constraint firstItem="bvt-JL-6bb" firstAttribute="bottom" secondItem="el4-Cx-uI1" secondAttribute="bottom" constant="-45" id="orc-rl-W3M"/>
+                            <constraint firstItem="yxb-BD-47j" firstAttribute="bottom" secondItem="el4-Cx-uI1" secondAttribute="bottom" constant="-20" id="pE6-bK-ilY"/>
+                            <constraint firstItem="el4-Cx-uI1" firstAttribute="top" secondItem="YpA-v7-TCn" secondAttribute="bottom" id="vDy-oN-WTf"/>
+                            <constraint firstItem="yxb-BD-47j" firstAttribute="trailing" secondItem="el4-Cx-uI1" secondAttribute="trailing" constant="-20" id="xaC-cY-PHK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h6N-MI-YaL"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="Time Controller" image="first" id="CHC-1f-hhl"/>
+                    <connections>
+                        <outlet property="AMPMLabel" destination="eGo-nG-uWK" id="bLS-Gf-2wp"/>
+                        <outlet property="hoursCircularSlider" destination="bvt-JL-6bb" id="s27-3Q-gBl"/>
+                        <outlet property="hoursLabel" destination="NHJ-fq-xbH" id="orB-Cc-l9b"/>
+                        <outlet property="minutesCircularSlider" destination="yxb-BD-47j" id="ZbP-HB-UHZ"/>
+                        <outlet property="minutesLabel" destination="3KF-Ly-4Do" id="a4P-8b-yGP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mj4-lI-b5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSO-uP-sKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660.8695652173915" y="1206.6964285714284"/>
+            <point key="canvasLocation" x="507" y="2372"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PX1-YO-BaJ">
@@ -1017,10 +1132,9 @@
     </scenes>
     <resources>
         <image name="backgroundimage" width="16" height="16"/>
+        <image name="first" width="16" height="16"/>
         <image name="logovblanco" width="16" height="16"/>
+        <image name="time_indicators" width="16" height="16"/>
         <image name="whatsapp" width="640" height="640"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kgs-tf-chJ"/>
-    </inferredMetricsTieBreakers>
 </document>

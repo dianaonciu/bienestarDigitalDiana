@@ -8,10 +8,13 @@
 
 import UIKit
 import Foundation
+import HGCircularSlider
 
 class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
     @IBOutlet weak var pickerView: UIPickerView!
+    
+    
     
     var pickerData = ["Instagram", "Whatsapp", "Gmail", "Facebook", "Reloj", "Chrome"]
     override func viewDidLoad() {
@@ -19,6 +22,8 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
