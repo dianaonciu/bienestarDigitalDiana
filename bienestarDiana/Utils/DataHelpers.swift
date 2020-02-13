@@ -33,6 +33,8 @@ class DataHelpers{
         
     }
     
+    
+    
     static func parseCsvData ()-> [DataModel] {
         var texto:String = " "
         do {

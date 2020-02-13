@@ -21,14 +21,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var totalTime: UILabel!
     
     var detailName: String?
+    
     var totalTimeApp: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //detailImage.image = UIImage.init(imageLiteralResourceName: detailName!)
-
+    
         appName.text = detailName
         
         totalTime.text = totalTimeApp
+        
+        //detailImage.image = UIImage.init(imageLiteralResourceName: detailName!)
         
         self.myTableView.dataSource = self
         self.myTableView.delegate = self

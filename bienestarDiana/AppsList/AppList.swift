@@ -19,9 +19,10 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         // Do any additional setup after loading the view.
         self.myCollectionView.dataSource = self
         self.myCollectionView.delegate = self
-        
-        data = DataHelpers.parseCsvData()
+         data = DataHelpers.parseCsvData()
     }
+    
+
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,7 +79,7 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         let item = (sender as? AppsCollectionViewCell)
         let indexPath = self.myCollectionView.indexPath(for: item!)
         let name = data[indexPath!.row].App
-
+        
         let appsTime = DataHelpers.getAppDates(dataModel: data, app: name)
         
         let totalMinutes = DataHelpers.totalMinutesByApp(appDates: appsTime)
@@ -90,6 +91,5 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         detailVC.totalTimeApp = "Total minutes:  \(totalMinutesString)"
     }
     
-   
     
 }
