@@ -38,7 +38,17 @@ struct User: Codable {
         self.id = nil
         
     }
-    
+    init(password:String) {
+        
+        self.email=nil
+        self.password=password
+        self.userName=nil
+        self.token = nil
+        self.location=nil
+        self.picture = nil
+        self.id = nil
+        
+    }
     enum CodingKeys: String, CodingKey {
         case id, email,password
         case userName = "user_name"

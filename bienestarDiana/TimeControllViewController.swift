@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import HGCircularSlider
+import Alamofire
 
 class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
@@ -33,9 +34,10 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    return pickerData[row]
+        
+      return pickerData[row]
+        
     }
-    
     
     @IBOutlet weak var minutesCircularSlider: CircularSlider!
     @IBOutlet weak var hoursCircularSlider: CircularSlider!
@@ -45,6 +47,8 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var minutesCircularSlider3: CircularSlider!
     @IBOutlet weak var hoursCircularSlider3: CircularSlider!
+    
+    var control: [Control] = []
     
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
@@ -68,8 +72,8 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func setupSliders() {
         hoursCircularSlider.minimumValue = 0
-        hoursCircularSlider.maximumValue = 12
-        hoursCircularSlider.endPointValue = 6
+        hoursCircularSlider.maximumValue = 24
+        hoursCircularSlider.endPointValue = 0
         hoursCircularSlider.addTarget(self, action: #selector(updateHours), for: .valueChanged)
         hoursCircularSlider.addTarget(self, action: #selector(adjustHours), for: .editingDidEnd)
         
@@ -88,19 +92,19 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         // minutes
         minutesCircularSlider.minimumValue = 0
         minutesCircularSlider.maximumValue = 60
-        minutesCircularSlider.endPointValue = 35
+        minutesCircularSlider.endPointValue = 0
         minutesCircularSlider.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
         minutesCircularSlider.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
         
         minutesCircularSlider2.minimumValue = 0
         minutesCircularSlider2.maximumValue = 60
-        minutesCircularSlider2.endPointValue = 35
+        minutesCircularSlider2.endPointValue = 0
         minutesCircularSlider2.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
         minutesCircularSlider2.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
         
         minutesCircularSlider3.minimumValue = 0
         minutesCircularSlider3.maximumValue = 60
-        minutesCircularSlider3.endPointValue = 35
+        minutesCircularSlider3.endPointValue = 0
         minutesCircularSlider3.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
         minutesCircularSlider3.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
         
@@ -135,7 +139,7 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         let selectedHour3 = round(hoursCircularSlider3.endPointValue)
         hoursCircularSlider3.endPointValue = selectedHour3
         
- 
+        updateHours()
     }
     
     @objc func updateMinutes() {
@@ -156,11 +160,11 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     @objc func adjustMinutes() {
         let selectedMinute = round(minutesCircularSlider.endPointValue)
         minutesCircularSlider.endPointValue = selectedMinute
-        updateMinutes()
+     
         
         let selectedMinute2 = round(minutesCircularSlider2.endPointValue)
         minutesCircularSlider2.endPointValue = selectedMinute2
-        updateMinutes()
+   
         
         let selectedMinute3 = round(minutesCircularSlider3.endPointValue)
         minutesCircularSlider3.endPointValue = selectedMinute3
@@ -173,4 +177,42 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func switchBetweenAMAndPM2(_ sender: UISegmentedControl) {
         AMPMLabel2.text = sender.selectedSegmentIndex == 0 ? "AM" : "PM"
     }
+    
+    
+    
+    @IBAction func saveData(_ sender: Any) {
+        
+        //let maxTime = hoursLabel.text
+        
+        
+    }
+    
+    
+    
+    func createControl(app:String,maxTime:String,startHour:String, endHour: String)  {
+        let url = URL(string:"http://0.0.0.0:8888/bienestar/public/api/control")
+        let control=Control( app: app, maxTime: maxTime, startHour: startHour, endHour: endHour)
+        
+        AF.request(url!,
+                   method: .post,
+                   parameters:control,
+                   encoder: JSONParameterEncoder.default
+            
+            ).response { response in
+                do{
+                    let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
+                    if(responseData.code==200) {
+                        self.present(DataHelpers.displayAlert(userMessage:"Registered!", alertType: 1), animated: true, completion: nil)
+                    }else{
+                        self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
+                    }
+                    
+                }catch{
+                    print(error)
+                    
+                }
+        }
+        
+    }
+    
 }

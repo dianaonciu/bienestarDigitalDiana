@@ -186,18 +186,6 @@ class DataHelpers{
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     static func displayAlert(userMessage:String, alertType: Int)->UIAlertController{
         let alertTitle: String
         
