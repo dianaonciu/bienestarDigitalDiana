@@ -41,7 +41,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
                     (isWorking) in
                     
                     if(isWorking) {self.segueLogin()
-                        self.present(DataHelpers.displayAlert(userMessage:"successful login!", alertType: 1), animated: true, completion: nil)
+                        
                     }
                     
                     
