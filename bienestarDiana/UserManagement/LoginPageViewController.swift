@@ -33,9 +33,9 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         } else {
            
             if(DataHelpers.isValidEmail(userEmail!) && DataHelpers.isValidPassword(userPassword!)){
-              self.segueLogin()
-            }
-                /*loginUser(email: userEmail!, password: userPassword!)
+              
+            
+                loginUser(email: userEmail!, password: userPassword!)
                 
                 {
                     (isWorking) in
@@ -47,7 +47,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-            }*/
+            }
             
             
         }
@@ -93,7 +93,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         }
     }
     func loginUser(email:String,password:String, completion: @escaping (Bool) -> ()){
-        let url = URL(string:"http://0.0.0.0:8888/petit-api/public/api/user/login")
+        let url = URL(string:"http://0.0.0.0:8888/bienestar-api/public/api/user/login")
         let user=User( email: email, password: password)
         
         AF.request(url!,
@@ -104,23 +104,31 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
             ).response { response in
                 print(response);
                 var isWorking = false
-                do{
-                    let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
-                    if(responseData.code==200) {
+                if response.error == nil {
+                    do{
+                        let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
+                        /*if(responseData.code==1004) {
+                            
+                            
+                            isWorking = true
+                            completion(isWorking)
+                            
+                        }else{
+                  self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
+                            isWorking = true
+                            completion(isWorking)
+                        }*/
                         
+                    }catch{
+                        print(error)
                         
-                        isWorking = true
-                        completion(isWorking)
-                        
-                    }else{
-                        self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
-                        completion(isWorking)
                     }
-                    
-                }catch{
-                    print(error)
-                    
+                }else{
+                    print("ERROR \(response.error)" ?? "nope")
+                    isWorking = true
+                    completion(isWorking)
                 }
+                
         }
         
     }
