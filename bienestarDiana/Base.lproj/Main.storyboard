@@ -886,12 +886,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-lk-h9P">
+                                <rect key="frame" x="20" y="740" width="120" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="AM"/>
+                                    <segment title="PM"/>
+                                </segments>
+                                <color key="tintColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchBetweenAMAndPM:" destination="7yw-SM-oqh" eventType="valueChanged" id="7NJ-fZ-7ZW"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-5r-gTA">
+                                <rect key="frame" x="274" y="739" width="120" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="AM"/>
+                                    <segment title="PM"/>
+                                </segments>
+                                <color key="tintColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchBetweenAMAndPM2:" destination="7yw-SM-oqh" eventType="valueChanged" id="nuW-Q6-79f"/>
+                                </connections>
+                            </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srM-fz-L6w">
                                 <rect key="frame" x="20" y="585" width="91" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6t-rF-yXx" customClass="CircularSlider" customModule="HGCircularSlider">
-                                        <rect key="frame" x="-11" y="-62" width="140" height="256"/>
+                                        <rect key="frame" x="-11" y="-60" width="140" height="254"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKI-Eu-v6H" customClass="CircularSlider" customModule="HGCircularSlider">
@@ -1098,6 +1122,20 @@
                                 <rect key="frame" x="130" y="147" width="155" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="53" text="AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-rW-Db3">
+                                <rect key="frame" x="43" y="659" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="53" text="AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkL-xw-G2m">
+                                <rect key="frame" x="297" y="659" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1450980392" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tHg-PQ-lGG"/>
@@ -1105,10 +1143,20 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Time Controller" image="first" id="CHC-1f-hhl"/>
                     <connections>
+                        <outlet property="AMPMLabel" destination="2DS-rW-Db3" id="oEr-BM-ubU"/>
+                        <outlet property="AMPMLabel2" destination="fkL-xw-G2m" id="iqM-mQ-TDr"/>
                         <outlet property="hoursCircularSlider" destination="FG7-48-AcG" id="LjY-G1-LtE"/>
+                        <outlet property="hoursCircularSlider2" destination="uKI-Eu-v6H" id="Ovz-4R-HH2"/>
+                        <outlet property="hoursCircularSlider3" destination="QLc-RS-iTn" id="D24-4v-Ab6"/>
                         <outlet property="hoursLabel" destination="Q87-0O-99g" id="ond-iU-cJK"/>
+                        <outlet property="hoursLabel2" destination="xsa-bT-Cc6" id="xsX-PP-hj2"/>
+                        <outlet property="hoursLabel3" destination="7P7-ce-F2m" id="pDY-WC-zdU"/>
                         <outlet property="minutesCircularSlider" destination="P7B-2u-dAB" id="BsL-e2-MMu"/>
+                        <outlet property="minutesCircularSlider2" destination="T6t-rF-yXx" id="UTO-qE-Ufm"/>
+                        <outlet property="minutesCircularSlider3" destination="BGo-9t-Zr1" id="MzT-LQ-bbE"/>
                         <outlet property="minutesLabel" destination="Kga-pq-f9w" id="wCr-Zc-bu4"/>
+                        <outlet property="minutesLabel2" destination="PSB-1f-K60" id="hfa-Yj-8rn"/>
+                        <outlet property="minutesLabel3" destination="ru7-SK-G6s" id="e0y-1V-wA8"/>
                         <outlet property="pickerView" destination="wDY-oe-7mQ" id="Tuq-DW-Xew"/>
                     </connections>
                 </viewController>

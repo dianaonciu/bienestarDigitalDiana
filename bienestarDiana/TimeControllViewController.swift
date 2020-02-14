@@ -13,10 +13,7 @@ import HGCircularSlider
 class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var circularSlider: CircularSlider!
-    
-
-    
+   
     var pickerData = ["Instagram", "Whatsapp", "Gmail", "Facebook", "Reloj", "Chrome"]
     
     override func viewDidLoad() {
@@ -43,10 +40,26 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var minutesCircularSlider: CircularSlider!
     @IBOutlet weak var hoursCircularSlider: CircularSlider!
     
-
+    @IBOutlet weak var minutesCircularSlider2: CircularSlider!
+    @IBOutlet weak var hoursCircularSlider2: CircularSlider!
+    
+    @IBOutlet weak var minutesCircularSlider3: CircularSlider!
+    @IBOutlet weak var hoursCircularSlider3: CircularSlider!
+    
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
+    
+    @IBOutlet weak var hoursLabel2: UILabel!
+    @IBOutlet weak var minutesLabel2: UILabel!
+    
+    @IBOutlet weak var hoursLabel3: UILabel!
+    @IBOutlet weak var minutesLabel3: UILabel!
+    
+    
     @IBOutlet weak var AMPMLabel: UILabel!
+    
+    
+    @IBOutlet weak var AMPMLabel2: UILabel!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,12 +73,38 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         hoursCircularSlider.addTarget(self, action: #selector(updateHours), for: .valueChanged)
         hoursCircularSlider.addTarget(self, action: #selector(adjustHours), for: .editingDidEnd)
         
+        hoursCircularSlider2.minimumValue = 0
+        hoursCircularSlider2.maximumValue = 12
+        hoursCircularSlider2.endPointValue = 6
+        hoursCircularSlider2.addTarget(self, action: #selector(updateHours), for: .valueChanged)
+        hoursCircularSlider2.addTarget(self, action: #selector(adjustHours), for: .editingDidEnd)
+        
+        hoursCircularSlider3.minimumValue = 0
+        hoursCircularSlider3.maximumValue = 12
+        hoursCircularSlider3.endPointValue = 6
+        hoursCircularSlider3.addTarget(self, action: #selector(updateHours), for: .valueChanged)
+        hoursCircularSlider3.addTarget(self, action: #selector(adjustHours), for: .editingDidEnd)
+        
         // minutes
         minutesCircularSlider.minimumValue = 0
         minutesCircularSlider.maximumValue = 60
         minutesCircularSlider.endPointValue = 35
         minutesCircularSlider.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
         minutesCircularSlider.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
+        
+        minutesCircularSlider2.minimumValue = 0
+        minutesCircularSlider2.maximumValue = 60
+        minutesCircularSlider2.endPointValue = 35
+        minutesCircularSlider2.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
+        minutesCircularSlider2.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
+        
+        minutesCircularSlider3.minimumValue = 0
+        minutesCircularSlider3.maximumValue = 60
+        minutesCircularSlider3.endPointValue = 35
+        minutesCircularSlider3.addTarget(self, action: #selector(updateMinutes), for: .valueChanged)
+        minutesCircularSlider3.addTarget(self, action: #selector(adjustMinutes), for: .editingDidEnd)
+        
+      
         
 
     }
@@ -74,12 +113,27 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         var selectedHour = Int(hoursCircularSlider.endPointValue)
         selectedHour = (selectedHour == 0 ? 12 : selectedHour)
         hoursLabel.text = String(format: "%02d", selectedHour)
+        
+        var selectedHour2 = Int(hoursCircularSlider2.endPointValue)
+        selectedHour2 = (selectedHour2 == 0 ? 12 : selectedHour2)
+        hoursLabel2.text = String(format: "%02d", selectedHour2)
+        
+        
+        var selectedHour3 = Int(hoursCircularSlider3.endPointValue)
+        selectedHour3 = (selectedHour3 == 0 ? 12 : selectedHour3)
+        hoursLabel3.text = String(format: "%02d", selectedHour3)
 
     }
     
     @objc func adjustHours() {
         let selectedHour = round(hoursCircularSlider.endPointValue)
         hoursCircularSlider.endPointValue = selectedHour
+        
+        let selectedHour2 = round(hoursCircularSlider2.endPointValue)
+        hoursCircularSlider2.endPointValue = selectedHour2
+        
+        let selectedHour3 = round(hoursCircularSlider3.endPointValue)
+        hoursCircularSlider3.endPointValue = selectedHour3
         
  
     }
@@ -88,6 +142,14 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         var selectedMinute = Int(minutesCircularSlider.endPointValue)
         selectedMinute = (selectedMinute == 60 ? 0 : selectedMinute)
         minutesLabel.text = String(format: "%02d", selectedMinute)
+        
+        var selectedMinute2 = Int(minutesCircularSlider2.endPointValue)
+        selectedMinute2 = (selectedMinute2 == 60 ? 0 : selectedMinute2)
+        minutesLabel2.text = String(format: "%02d", selectedMinute2)
+        
+        var selectedMinute3 = Int(minutesCircularSlider3.endPointValue)
+        selectedMinute3 = (selectedMinute3 == 60 ? 0 : selectedMinute3)
+        minutesLabel3.text = String(format: "%02d", selectedMinute3)
 
     }
     
@@ -95,9 +157,20 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         let selectedMinute = round(minutesCircularSlider.endPointValue)
         minutesCircularSlider.endPointValue = selectedMinute
         updateMinutes()
+        
+        let selectedMinute2 = round(minutesCircularSlider2.endPointValue)
+        minutesCircularSlider2.endPointValue = selectedMinute2
+        updateMinutes()
+        
+        let selectedMinute3 = round(minutesCircularSlider3.endPointValue)
+        minutesCircularSlider3.endPointValue = selectedMinute3
+        updateMinutes()
     }
     
     @IBAction func switchBetweenAMAndPM(_ sender: UISegmentedControl) {
         AMPMLabel.text = sender.selectedSegmentIndex == 0 ? "AM" : "PM"
+    }
+    @IBAction func switchBetweenAMAndPM2(_ sender: UISegmentedControl) {
+        AMPMLabel2.text = sender.selectedSegmentIndex == 0 ? "AM" : "PM"
     }
 }
