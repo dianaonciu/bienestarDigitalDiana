@@ -20,24 +20,29 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var detailName: String?
     
+    var filteredData: [DataModel] = []
+    
     var totalTimeApp: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        self.myTableView.dataSource = self
+        self.myTableView.delegate = self
+        
         appName.text = detailName
         
         totalTime.text = totalTimeApp
         
-        //detailImage.image = UIImage.init(imageLiteralResourceName: detailName!)
-        
-        self.myTableView.dataSource = self
-        self.myTableView.delegate = self
         data = DataHelpers.parseCsvData()
+        
+        filteredData = data.filter({$0.App == detailName})
+        print(filteredData)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return data.count
+        return filteredData.count
         
     }
     
@@ -45,13 +50,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         let identifier = "cellDates"
         
-        let dates = data[indexPath.row].Date
+        let dates = filteredData[indexPath.row].Date
         
         let cell = self.myTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! AppsTableViewCell
         
-        cell.labelDates.text = dates
+
+            cell.labelDates.text = dates
+        
         
         return cell
         

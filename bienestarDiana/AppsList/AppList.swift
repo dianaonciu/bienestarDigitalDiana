@@ -22,9 +22,6 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
          data = DataHelpers.parseCsvData()
     }
     
-
-    
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -41,8 +38,12 @@ class AppList: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         let totalMinutesString = String(totalMinutes)
         
         let name = data[indexPath.row].App
+        
+        let event = data[indexPath.row].Event
        
         cell.itemLabel.text = name
+        
+        cell.itemLabelEvent.text = event
         
         cell.itemLabelTime.text = " \(totalMinutesString) mins"
         
