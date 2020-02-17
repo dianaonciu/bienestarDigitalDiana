@@ -20,6 +20,18 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     //Displays an alert with a message depending on the string passed through parameters
     
     
+    override func viewDidLoad() {
+        userEmailTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        userPasswordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.view.backgroundColor = .clear
+    }
+    
     @IBAction func loginButton(_ sender: Any) {
         let userEmail = userEmailTF.text;
         let userPassword = userPasswordTF.text;
@@ -54,18 +66,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-    
-    override func viewDidLoad() {
-        userEmailTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        userPasswordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        
-        self.navigationController?.view.backgroundColor = .clear
-    }
+   
     
     // This will notify us when something has changed on the textfield
     @objc func textFieldDidChange(_ textfield: UITextField) {
@@ -81,7 +82,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
                     }
                 case userPasswordTF:
                     if(!DataHelpers.isValidPassword(text)) {
-                        errorMessage = "Must contains 8 characters and 1 number"
+                        errorMessage = "Must contain 8 characters and 1 number"
                     }
                 default:
                     errorMessage = ""
@@ -107,19 +108,8 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
                 if response.error == nil {
                     do{
                         let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
-                        /*if(responseData.code==1004) {
-                            
-                            
-                            isWorking = true
-                            completion(isWorking)
-                            
-                        }else{
-                  self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
-                            isWorking = true
-                            completion(isWorking)
-                        }*/
                         
-                    }catch{
+                     }catch{
                         print(error)
                         
                     }
@@ -142,8 +132,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func signUpSegue(_ sender: Any) {
-        self.performSegue(withIdentifier: "signUpSegue", sender: sender)
-    }
+    
     
 }

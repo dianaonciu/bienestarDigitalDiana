@@ -102,15 +102,31 @@
 				7F2B25CE23DF628400CE04C9 /* AppDelegate.swift */,
 				7F2B25D223DF628400CE04C9 /* Main.storyboard */,
 				7F2B25D723DF628600CE04C9 /* LaunchScreen.storyboard */,
-				7FF3C81923F46E48005DC6D4 /* TimeControllViewController.swift */,
-				7FFC9CDC23F5CBD000DC1193 /* MapViewController.swift */,
-				7FBCC26723F7169E000C4CE0 /* Control.swift */,
+				7F69A46B23FADD3600B323D0 /* Map */,
+				7F69A46A23FADD1D00B323D0 /* Time Controller */,
 				7FFC9CE323F5CF9800DC1193 /* Utils */,
 				7FFC9CE523F5CFF400DC1193 /* AppsDetail */,
 				7FFC9CE423F5CFDB00DC1193 /* AppsList */,
 				7FFC9CE223F5CF8000DC1193 /* UserManagement */,
 			);
 			path = bienestarDiana;
+			sourceTree = "<group>";
+		};
+		7F69A46A23FADD1D00B323D0 /* Time Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FF3C81923F46E48005DC6D4 /* TimeControllViewController.swift */,
+				7FBCC26723F7169E000C4CE0 /* Control.swift */,
+			);
+			path = "Time Controller";
+			sourceTree = "<group>";
+		};
+		7F69A46B23FADD3600B323D0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC9CDC23F5CBD000DC1193 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		7FFC9CE223F5CF8000DC1193 /* UserManagement */ = {

@@ -53,11 +53,11 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
                     }
                 case userPasswordTF:
                     if(!DataHelpers.isValidPassword(text)) {
-                        errorMessage = "Must contains 8 characters and 1 number"
+                        errorMessage = "Must contain 8 characters and 1 number"
                     }
                 case userConfirmPassword:
                     if(!DataHelpers.isValidRepeatedPassword(text, userPasswordTF.text ?? "" )) {
-                        errorMessage = "Passwords doesn't match"
+                        errorMessage = "Passwords don't match"
                     }
                 default:
                     errorMessage = ""
@@ -95,7 +95,7 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
                 
             } else {
                 
-                self.present(DataHelpers.displayAlert(userMessage: "Woof! you need to fix that first", alertType: 0), animated: true, completion: nil)
+                self.present(DataHelpers.displayAlert(userMessage: "You need to fix that first", alertType: 0), animated: true, completion: nil)
             }
         }
         
@@ -110,18 +110,24 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
                    encoder: JSONParameterEncoder.default
             
             ).response { response in
+                print(response);
+                if response.error == nil {
                 do{
                     let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
-                    if(responseData.code==200) {
-                        self.segueLogin()
+                    /*if(responseData.code==200) {
+                        
                         self.present(DataHelpers.displayAlert(userMessage:"Registered!", alertType: 1), animated: true, completion: nil)
                     }else{
                         self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
-                    }
+                    }*/
                     
                 }catch{
                     print(error)
                     
+                }
+                }else{
+                    print("ERROR \(response.error)" ?? "nope")
+                    self.segueLogin()
                 }
         }
         

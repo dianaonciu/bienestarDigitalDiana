@@ -179,9 +179,6 @@ class DataHelpers{
         
         let totalMinutesRounded = Double(round(100*totalMinutes)/100)
         
-   
-        print("Total de minutos  \(totalMinutesRounded)")
-        
         return totalMinutesRounded
         
     }
