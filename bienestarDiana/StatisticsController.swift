@@ -33,14 +33,16 @@ public class StatisticsController : UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         data = DataHelpers.parseCsvData()
+        var appsTime = [String]()
+        var totalMinutes: Double = 0
         
         dataList = [
-            CSPieChartData(key: data[0].App, value: 30),
-            CSPieChartData(key: data[1].App, value: 30),
-            CSPieChartData(key: data[2].App, value: 30),
-            CSPieChartData(key: data[3].App, value: 30),
-            CSPieChartData(key: data[4].App, value: 30),
-            CSPieChartData(key: data[5].App, value: 30)
+            CSPieChartData(key: data[0].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[0].App))),
+            CSPieChartData(key: data[4].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[4].App))),
+            CSPieChartData(key: data[6].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[6].App))),
+            CSPieChartData(key: data[8].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[8].App))),
+            CSPieChartData(key: data[12].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[12].App))),
+            CSPieChartData(key: data[26].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[26].App)))
         ]
         pieChart?.dataSource = self as! CSPieChartDataSource
         pieChart?.delegate = self as! CSPieChartDelegate
