@@ -18,39 +18,36 @@ class DataHelpers{
         
         do {
             
-            let texto = try String(contentsOf: path, encoding: .utf8)
+            let text = try String(contentsOf: path, encoding: .utf8)
             
-            print(JSONObjectFromTSV(tsvInputString: texto, columnNames: ["Date","App","Event","Latitude","Longitude"]))
+            print(JSONObjectFromTSV(tsvInputString: text, columnNames: ["Date","App","Event","Latitude","Longitude"]))
             
             
         } catch {
             
-            print("Error al leer desde fichero")
+            print("Error reading the file")
             
         }
-        
-        
         
     }
     
     
-    
     static func parseCsvData ()-> [DataModel] {
-        var texto:String = " "
+        var text:String = " "
         do {
             
-             texto = try String(contentsOf: path, encoding: .utf8)
+             text = try String(contentsOf: path, encoding: .utf8)
             
-            print(JSONObjectFromTSV(tsvInputString: texto, columnNames: ["Date","App","Event","Latitude","Longitude"]))
+            print(JSONObjectFromTSV(tsvInputString: text, columnNames: ["Date","App","Event","Latitude","Longitude"]))
             
             
         } catch {
             
-            print("Error al leer desde fichero")
+            print("Error reading the file")
             
         }
         var result: [DataModel] = []
-        var rows = texto.components(separatedBy: "\n")
+        var rows = text.components(separatedBy: "\n")
         rows.remove(at:0)
         for row in rows{
             let column = row.components(separatedBy: ",")
@@ -85,12 +82,7 @@ class DataHelpers{
             
             if fieldValues.count != columnCount {
                 
-                
-            }
-                
-            else
-                
-            {
+            }else {
                 
                 result.append(NSDictionary(objects: fieldValues, forKeys: columnNames as [NSCopying]))
                 
@@ -160,20 +152,20 @@ class DataHelpers{
             
         }
     
-        var arrayResta = [Double]()
+        var subtractionArray = [Double]()
         
-        var resta1 : Double
+        var substraction : Double
         
         for j in 0..<arrayClose.count{
             
-            resta1 = arrayClose[j] - arrayOpen[j]
+            substraction = arrayClose[j] - arrayOpen[j]
             
-            arrayResta.append(resta1)
+            subtractionArray.append(substraction)
             
         }
         
         
-        var totalSeconds : Double = arrayResta.reduce(0, +)
+        var totalSeconds : Double = subtractionArray.reduce(0, +)
         
         var totalMinutes = (totalSeconds.truncatingRemainder(dividingBy: 3600) / 60)
         

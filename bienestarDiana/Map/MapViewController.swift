@@ -12,8 +12,6 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    
-    
     @IBOutlet var mapView: MKMapView!
     var data: [DataModel] = []
     let regionRadius: CLLocationDistance = 1000
@@ -28,8 +26,6 @@ class MapViewController: UIViewController {
             
         }
         mapView.setRegion(centerMapOnLocation(latitude: data[0].Latitude, longitude: data[0].Longitude), animated: true)
-        
-        
         
     }
     

@@ -19,7 +19,6 @@ public class StatisticsController : UIViewController {
     
     var data: [DataModel] = []
     
-    
     var colorList: [UIColor] = [
         .red,
         .orange,
@@ -33,8 +32,6 @@ public class StatisticsController : UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         data = DataHelpers.parseCsvData()
-        var appsTime = [String]()
-        var totalMinutes: Double = 0
         
         dataList = [
             CSPieChartData(key: data[0].App, value: DataHelpers.totalMinutesByApp(appDates: DataHelpers.getAppDates(dataModel: data, app: data[0].App))),

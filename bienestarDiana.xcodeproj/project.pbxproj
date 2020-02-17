@@ -29,8 +29,6 @@
 		7FF3C81623F46131005DC6D4 /* AppsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3C81523F46131005DC6D4 /* AppsTableViewCell.swift */; };
 		7FF3C81A23F46E48005DC6D4 /* TimeControllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3C81923F46E48005DC6D4 /* TimeControllViewController.swift */; };
 		7FFC9CDD23F5CBD000DC1193 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC9CDC23F5CBD000DC1193 /* MapViewController.swift */; };
-		7FFC9CE823F5D00E00DC1193 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC9CE623F5D00E00DC1193 /* BarView.swift */; };
-		7FFC9CE923F5D00E00DC1193 /* StackViewBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC9CE723F5D00E00DC1193 /* StackViewBarChart.swift */; };
 		973D1655F481A2F4D44CFA63 /* Pods_bienestarDiana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F91D028AFDADEFEB57EC4D0 /* Pods_bienestarDiana.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +60,6 @@
 		7FF3C81523F46131005DC6D4 /* AppsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsTableViewCell.swift; sourceTree = "<group>"; };
 		7FF3C81923F46E48005DC6D4 /* TimeControllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeControllViewController.swift; sourceTree = "<group>"; };
 		7FFC9CDC23F5CBD000DC1193 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		7FFC9CE623F5D00E00DC1193 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		7FFC9CE723F5D00E00DC1193 /* StackViewBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBarChart.swift; sourceTree = "<group>"; };
 		7FFC9CEE23F5D03100DC1193 /* usage.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = usage.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,8 +156,6 @@
 			children = (
 				7F6DFE8723FB070E0033EF3C /* test.png */,
 				7FFC9CEE23F5D03100DC1193 /* usage.csv */,
-				7FFC9CE623F5D00E00DC1193 /* BarView.swift */,
-				7FFC9CE723F5D00E00DC1193 /* StackViewBarChart.swift */,
 				7FC2445123E8900300AEEEC4 /* DataHelpers.swift */,
 				7F0E028023F30BDE009131E0 /* DataModel.swift */,
 			);
@@ -321,7 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC2445023E88CDE00AEEEC4 /* LoginPageViewController.swift in Sources */,
-				7FFC9CE823F5D00E00DC1193 /* BarView.swift in Sources */,
 				7FF3C81623F46131005DC6D4 /* AppsTableViewCell.swift in Sources */,
 				7FEA9F1C23F1D66200A44702 /* UserProfileViewController.swift in Sources */,
 				7F6DFE8623FAFF220033EF3C /* StatisticsController.swift in Sources */,
@@ -333,7 +326,6 @@
 				7FC2445623E892CA00AEEEC4 /* RecoverPageViewController.swift in Sources */,
 				7FC2445423E8909900AEEEC4 /* RegisterPageViewController.swift in Sources */,
 				7FC2445A23E89DB500AEEEC4 /* Register.swift in Sources */,
-				7FFC9CE923F5D00E00DC1193 /* StackViewBarChart.swift in Sources */,
 				7FC2445E23E8AA0F00AEEEC4 /* DetailViewController.swift in Sources */,
 				7FF3C81A23F46E48005DC6D4 /* TimeControllViewController.swift in Sources */,
 				7FBCC26823F7169E000C4CE0 /* Control.swift in Sources */,

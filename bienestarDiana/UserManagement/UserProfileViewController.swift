@@ -33,7 +33,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UNUserNo
         UNUserNotificationCenter.current().delegate = self
     }
     
-    // This will notify us when something has changed on the textfield
+    // This will notify when something changes on the textfield
     @objc func textFieldDidChange(_ textfield: UITextField) {
         
         if let text = textfield.text {

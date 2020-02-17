@@ -184,7 +184,7 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         //let maxTime = hoursLabel.text
         
-        
+        //createControl(app, MaxTime, startHour, endHour)
     }
     
     
@@ -199,18 +199,24 @@ class TimeControllViewController: UIViewController, UIPickerViewDelegate, UIPick
                    encoder: JSONParameterEncoder.default
             
             ).response { response in
+                if response.error == nil{
                 do{
                     let responseData:RegisterResponse = try JSONDecoder().decode(RegisterResponse.self, from: response.data!)
-                    if(responseData.code==200) {
+                    /*if(responseData.code==200) {
                         self.present(DataHelpers.displayAlert(userMessage:"Registered!", alertType: 1), animated: true, completion: nil)
                     }else{
                         self.present(DataHelpers.displayAlert(userMessage:responseData.errorMsg ?? "", alertType: 0), animated: true, completion: nil)
-                    }
+                    }*/
                     
                 }catch{
                     print(error)
                     
-                }
+                    }
+                    
+            }else{
+                    print("ERROR \(response.error)" ?? "nope")
+                    
+            }
         }
         
     }
