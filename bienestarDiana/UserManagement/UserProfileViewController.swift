@@ -97,6 +97,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate {
                         
                     }
                 }else{
+                    self.present(DataHelpers.displayAlert(userMessage:"Password changed!", alertType: 1), animated: true, completion: nil)
                     print("ENVIADA \(response.error)" ?? "nope")
                 }
         }
