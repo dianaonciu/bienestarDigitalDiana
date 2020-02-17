@@ -553,6 +553,53 @@
             </objects>
             <point key="canvasLocation" x="544.92753623188412" y="1621.875"/>
         </scene>
+        <!--Statistics-->
+        <scene sceneID="Ptb-uf-NSa">
+            <objects>
+                <viewController id="U0j-Ch-YrV" customClass="StatisticsController" customModule="bienestarDiana" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mYR-AX-HuG"/>
+                        <viewControllerLayoutGuide type="bottom" id="le9-Ll-Oa4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J3R-JF-Mhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggg-gv-6uQ" customClass="CSPieChart" customModule="CSPieChart">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ggg-gv-6uQ" secondAttribute="height" multiplier="1:1" id="F92-KI-i98"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZX-PC-qzj">
+                                <rect key="frame" x="153" y="705" width="108" height="30"/>
+                                <color key="tintColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Reload Piechart"/>
+                                <connections>
+                                    <action selector="reloadPieChart:" destination="U0j-Ch-YrV" eventType="touchUpInside" id="qdR-t8-5yH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ggg-gv-6uQ" firstAttribute="leading" secondItem="J3R-JF-Mhi" secondAttribute="leading" id="Nwp-iU-tci"/>
+                            <constraint firstAttribute="trailing" secondItem="ggg-gv-6uQ" secondAttribute="trailing" id="QdE-dc-oDf"/>
+                            <constraint firstItem="ggg-gv-6uQ" firstAttribute="centerY" secondItem="J3R-JF-Mhi" secondAttribute="centerY" id="Tq8-0k-luj"/>
+                            <constraint firstItem="UZX-PC-qzj" firstAttribute="centerX" secondItem="J3R-JF-Mhi" secondAttribute="centerX" id="XBB-44-ykn"/>
+                            <constraint firstItem="UZX-PC-qzj" firstAttribute="top" secondItem="ggg-gv-6uQ" secondAttribute="bottom" constant="50" id="jgq-Yb-8IW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mgh-x8-paS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Statistics" id="tcO-gV-gri"/>
+                    <connections>
+                        <outlet property="pieChart" destination="ggg-gv-6uQ" id="267-4C-R69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjE-Rm-iFf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="1213"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y42-jA-CVu">
             <objects>
@@ -567,6 +614,7 @@
                         <segue destination="7yw-SM-oqh" kind="relationship" relationship="viewControllers" id="TMI-3v-f0R"/>
                         <segue destination="fjx-Os-qyX" kind="relationship" relationship="viewControllers" id="G5z-t2-2vy"/>
                         <segue destination="rvN-xD-P5i" kind="relationship" relationship="viewControllers" id="s2T-MG-OCG"/>
+                        <segue destination="U0j-Ch-YrV" kind="relationship" relationship="viewControllers" id="3tN-z2-PJf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7J-Ub-K9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1213,7 +1261,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qo0-4h-0Ih">
-                                                <rect key="frame" x="16" y="58.5" width="360" height="43"/>
+                                                <rect key="frame" x="16" y="58.5" width="360" height="30"/>
                                                 <subviews>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-9C-Mg3">
                                                         <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
@@ -1226,7 +1274,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-g6-FMS" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="43"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -1239,7 +1287,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xvy-9C-qbC">
-                                                <rect key="frame" x="16" y="131.5" width="360" height="42.5"/>
+                                                <rect key="frame" x="16" y="118.5" width="360" height="30"/>
                                                 <subviews>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-kq-fq1">
                                                         <rect key="frame" x="0.0" y="0.0" width="360" height="0.0"/>
@@ -1252,7 +1300,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H62-XL-iEA" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="42.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -1265,7 +1313,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wiq-eT-o1T">
-                                                <rect key="frame" x="16" y="204" width="360" height="88"/>
+                                                <rect key="frame" x="16" y="178.5" width="360" height="113.5"/>
                                                 <subviews>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-qb-bKt">
                                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="0.0"/>

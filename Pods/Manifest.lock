@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - CSPieChart (1.0)
   - HGCircularSlider (2.2.0)
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - CSPieChart
   - HGCircularSlider
   - SkyFloatingLabelTextField
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CSPieChart
     - HGCircularSlider
     - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  CSPieChart: 45cb050fb963603995490a6ee825b075211f0d3e
   HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: 72f18cfc79ef7a83c2c5bd0d936d962bce404fb7
+PODFILE CHECKSUM: c358e3577b6a06410156ef647b6eb74f9c12fb0d
 
 COCOAPODS: 1.8.4

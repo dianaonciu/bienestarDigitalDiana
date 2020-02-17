@@ -7,6 +7,7 @@ target 'bienestarDiana' do
 	pod 'SkyFloatingLabelTextField'
 	pod 'Alamofire', '~> 5.0.0-rc.3'
 	pod "HGCircularSlider"
+	pod "CSPieChart"
   # Pods for bienestarDiana
 
 end

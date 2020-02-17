@@ -14,8 +14,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var myTableView: UITableView!
     
-    @IBOutlet weak var detailImage: UIImageView!
-    
     @IBOutlet weak var appName: UILabel!
     
     @IBOutlet weak var totalTime: UILabel!
