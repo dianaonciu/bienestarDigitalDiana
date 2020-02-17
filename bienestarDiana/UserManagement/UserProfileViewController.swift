@@ -9,8 +9,9 @@ import UIKit
 import Foundation
 import SkyFloatingLabelTextField
 import Alamofire
+import UserNotifications
 
-class UserProfileViewController: UIViewController, UITextFieldDelegate {
+class UserProfileViewController: UIViewController, UITextFieldDelegate, UNUserNotificationCenterDelegate  {
     
     @IBOutlet weak var userPasswordTF: SkyFloatingLabelTextField!
     
@@ -19,11 +20,17 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        UNUserNotificationCenter.current().requestAuthorization(options:[.alert,.sound]){
+            (auth,error) in
+            if auth {
+                print("Notifications allowed")
+            } else {
+                print("Notifications denied")
+            }
+        }
         userPasswordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         userConfirmPassword.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-        
+        UNUserNotificationCenter.current().delegate = self
     }
     
     // This will notify us when something has changed on the textfield
@@ -102,6 +109,21 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate {
                 }
         }
         
+    }
+    
+    @IBAction func notificationButton(_ sender: Any) {
+        let content = UNMutableNotificationContent()
+        content.title = "Hello!"
+        content.subtitle = "This is a notification"
+        content.body = "This is the body"
+        content.sound = UNNotificationSound.default
+        content.badge = 3
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request,withCompletionHandler: nil)
     }
 }
 

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="15" affinity="minX"/>
-                            <userLayoutGuide location="398" affinity="minX"/>
+                            <userLayoutGuide location="396" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="ovk-2R-cuZ">
@@ -31,8 +31,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logovblanco" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-KP-zgZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-KP-zgZ">
+                                <rect key="frame" x="42" y="180" width="350" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.070000000000000007" y="0.050000000000000003" width="0.84999999999999998" height="0.84999999999999998"/>
                             </imageView>
@@ -125,10 +125,9 @@
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                         <state key="normal" title="Forgot Password?">
-                                                                            <color key="titleColor" red="0.12549019610000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="titleColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="segueForgotPass:" destination="0Sg-fE-hZ9" eventType="touchUpInside" id="GNi-xo-lWx"/>
                                                                             <segue destination="9bw-HE-hJs" kind="show" identifier="forgotPassSegue" id="kgs-tf-chJ"/>
                                                                         </connections>
                                                                     </button>
@@ -140,7 +139,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfJ-mo-n6j">
                                                 <rect key="frame" x="16" y="614.5" width="382" height="50"/>
-                                                <color key="backgroundColor" red="0.12549019610000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="0.75577910960000005" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pGv-4j-VcT"/>
                                                 </constraints>
@@ -172,7 +171,7 @@
                                                                 <rect key="frame" x="194" y="0.0" width="66" height="20.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                 <state key="normal" title="Sign up">
-                                                                    <color key="titleColor" red="0.12549019610000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="titleColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <segue destination="qmv-aN-DHg" kind="show" identifier="signUpSegue" id="7O2-Bv-7zd"/>
@@ -207,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kr0-Kq-lPD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-651" y="139"/>
+            <point key="canvasLocation" x="-652.17391304347836" y="138.61607142857142"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="De3-xN-n3Z">
@@ -226,8 +225,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logovblanco" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-dY-Xnc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-dY-Xnc">
+                                <rect key="frame" x="0.0" y="170" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.070000000000000007" y="0.050000000000000003" width="0.84999999999999998" height="0.84999999999999998"/>
                             </imageView>
@@ -235,10 +234,10 @@
                                 <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHT-He-ZRa">
-                                        <rect key="frame" x="16" y="8" width="362" height="302"/>
+                                        <rect key="frame" x="16" y="8" width="362" height="300"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-5K-yoK">
-                                        <rect key="frame" x="16" y="340" width="362" height="50"/>
+                                        <rect key="frame" x="16" y="338" width="362" height="50"/>
                                         <subviews>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-gH-vDX">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="0.0"/>
@@ -267,7 +266,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XyK-wA-WBx">
-                                        <rect key="frame" x="16" y="420" width="362" height="50"/>
+                                        <rect key="frame" x="16" y="418" width="362" height="50"/>
                                         <subviews>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YDj-7V-Hfx">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="0.0"/>
@@ -296,7 +295,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-J4-5zl">
-                                        <rect key="frame" x="16" y="500" width="362" height="50"/>
+                                        <rect key="frame" x="16" y="498" width="362" height="50"/>
                                         <subviews>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-5J-cMa">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="0.0"/>
@@ -325,7 +324,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-7z-xc4">
-                                        <rect key="frame" x="16" y="580" width="362" height="50"/>
+                                        <rect key="frame" x="16" y="578" width="362" height="50"/>
                                         <subviews>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ybU-ir-dbZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="0.0"/>
@@ -354,7 +353,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-JE-tNc">
-                                        <rect key="frame" x="16" y="660" width="362" height="6"/>
+                                        <rect key="frame" x="16" y="658" width="362" height="8"/>
                                         <subviews>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VuM-mk-ZVU">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.5" height="0.0"/>
@@ -373,7 +372,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-DJ-ePR">
                                                 <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
-                                                <color key="backgroundColor" red="0.2439045608" green="0.80843698980000001" blue="0.75686353449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="x2g-Ci-62O"/>
                                                 </constraints>
@@ -632,6 +631,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dRx-SB-ib0">
+                                <rect key="frame" x="-1" y="200" width="414" height="669"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.070000000000000007" y="0.050000000000000003" width="0.84999999999999998" height="0.84999999999999998"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="fGc-yU-gvR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
@@ -649,7 +653,7 @@
                                                         <rect key="frame" x="91.5" y="0.0" width="199.5" height="31.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                        <color key="textColor" red="0.2439045608" green="0.80843698980000001" blue="0.75686353449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -661,7 +665,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address. You will receive a link to create a new password" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-eF-eO9">
                                                         <rect key="frame" x="15" y="0.0" width="352.5" height="49"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        <color key="textColor" red="0.2439045608" green="0.80843698980000001" blue="0.75686353449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -700,7 +704,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-Z5-wdR">
                                         <rect key="frame" x="16" y="716" width="382" height="50"/>
-                                        <color key="backgroundColor" red="0.24313725489999999" green="0.80784313730000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AJT-zn-Tnh"/>
                                         </constraints>
@@ -718,11 +722,6 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                             </stackView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logovblanco" translatesAutoresizingMaskIntoConstraints="NO" id="dRx-SB-ib0">
-                                <rect key="frame" x="-1" y="-27" width="414" height="298"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.070000000000000007" y="0.050000000000000003" width="0.84999999999999998" height="0.84999999999999998"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -740,7 +739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0US-ue-1jG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="830"/>
+            <point key="canvasLocation" x="544.92753623188412" y="829.6875"/>
         </scene>
         <!--Time Controller-->
         <scene sceneID="g39-oe-pd1">
@@ -1292,6 +1291,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wy-hL-Yh6">
                                         <rect key="frame" x="282" y="545.5" width="51" height="31"/>
                                         <color key="tintColor" red="0.93699400909999997" green="0.6230672022" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="notificationButton:" destination="rvN-xD-P5i" eventType="valueChanged" id="gOG-4E-tIV"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sw-e3-wfA">
                                         <rect key="frame" x="282" y="613" width="51" height="31"/>
@@ -1392,11 +1394,11 @@
     <resources>
         <image name="backgroundimage" width="16" height="16"/>
         <image name="first" width="16" height="16"/>
-        <image name="logovblanco" width="16" height="16"/>
+        <image name="logo" width="225" height="225"/>
         <image name="time_indicators" width="301" height="300"/>
         <image name="whatsapp" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y9c-Xs-xDT"/>
+        <segue reference="ZFQ-Hf-yAe"/>
     </inferredMetricsTieBreakers>
 </document>

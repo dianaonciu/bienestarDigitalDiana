@@ -127,9 +127,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "loginSegue", sender: nil)
     }
     
-    @IBAction func segueForgotPass(_ sender: Any) {
-        self.performSegue(withIdentifier: "forgotPassSegue", sender: sender)
-    }
+
     
     
     
