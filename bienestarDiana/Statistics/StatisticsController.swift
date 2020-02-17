@@ -127,5 +127,6 @@ extension StatisticsController: CSPieChartDelegate {
     public func pieChart(_ pieChart: CSPieChart, didSelectComponentAt index: Int) {
         let data = dataList[index]
         print(data.key)
+        print("Total minutes \(data.value)")
     }
 }
